@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--페이지 이름-->
+  <title>이지영의 포트폴리오</title>
+  <!--외부 스타일시트 사용-->
+  <link rel="stylesheet" href="style.css">
+  <meta name="author" content="이지영">
+  <meta name="description" content="인터넷 기초 04분반 - 이지영의 포트폴리오 자기소개 페이지입니다.">
+  <!--스타일 시트 사용-->
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
 
+    header, nav, section, footer {
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #f07bbb;
+      font-weight: bold;
+    }
+
+    section {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 30px;
+    }
+
+    img.profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 15px 0;
+      font-size: 0.9em;
+      border-top: 1px solid #ccc;
+      position: sticky;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <!--학번 및 프로필 이미지 업로드-->
+  <header>
+    <h1>20240788 이지영</h1>
+    <img src="./media/pf_image.jpg" alt="프로필 사진" class="profile">
+  </header>
+
+  <!-- 페이지 목차 앵커 내비게이션 -->
+  <nav>
+    <ul>
+      <li><a href="#about">자기소개</a></li>
+      <li><a href="#contact">연락처</a></li>
+      <li><a href="#miniproject">미니프로젝트</a></li>
+      <li><a href="#extra">기타</a></li>
+    </ul>
+  </nav>
+  <!--자기소개 영역-->
+  <main>
+    <section id="about">
+      <h2>자기소개</h2>
+      <p>저는 인터넷 기초 04분반을 수강하고 있는 카피바라입니다.</p>
+    </section>
+    <!--연락처 영역-->
+    <section id="contact">
+      <h2>연락처</h2>
+      <ul>
+        <li>이메일: <a href="mailto:pponnyo@naver.com">pponnyo@naver.com</a></li>
+        <li>GitHub: <a href="https://github.com/l2j2young" target="_blank">github.com/l2j2young</a></li>
+        <li>전화번호: 010-2140-6434</li>
+      </ul>
+    </section>
+    <!--프로젝트 바로가기-->
+    <section id="miniproject">
+      <h2>프로젝트</h2>
+      <ol type="1">
+        <li>
+          <a href="./pages/indexmini.html" title="링크를 클릭하시면 귀여운 동물 소개 상세페이지로 이동합니다.">
+            <!-- 프로젝트 대표 이미지 -->
+            <img src="./media/project_image.jpg" alt="귀여운 동물 소개" style="width: 300px; border-radius: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.2);">
+            <br>
+            귀여운 동물 소개 페이지
+          </a>
+        </li>
+    </ol>
+    </section>
+    <!--기타 영역-->
+    <section id="extra">
+      <h2>한 마디</h2>
+      <p>한 학기동안 많이 부족하지만 열심히 수강하겠습니다!</p>
+    </section>
+  </main>
+
+  <!-- 꼬리말/하단 푸터 정보 -->
+  <footer>
+    <div>👩 제작자: 이지영</div>
+    <div>📧 pponnyo@naver.com</div>
+    <div>🌐 이 페이지는 포트폴리오용입니다.</div>
+  </footer>
+
+</body>
+</html>
