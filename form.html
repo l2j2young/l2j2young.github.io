@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>이지영 팬클럽 가입 신청</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .container {
+      width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      background-color: #fefefe;
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>이지영 팬클럽 가입 신청</h2>
+
+    <!-- 스프래드시트 웹앱 연결 -->
+    <form action="https://script.google.com/macros/s/AKfycbxz8TOlxwcwqfK_D0CgbWM8SpNjeGD5yyrXKYTUUxMQuaBhoou4Oi2N5hnlTAoVLhY-/exec" method="post" onsubmit="submitForm(event)">
+
+      <!-- 이름 -->
+      <label>
+        이름:
+        <input type="text" name="name" placeholder="귀요미" required>
+      </label>
+
+      <!-- 이메일 형식 검사 포함 -->
+      <label>
+        이메일:
+        <input type="email" name="email" placeholder="pponnyo@naver.com" required>
+      </label>
+
+      <!-- 활동 고르기 -->
+      <label>
+        좋아하는 활동:
+        <input type="text" name="activity" list="activityList" placeholder="활동을 골라주세요">
+        <datalist id="activityList">
+          <option value="잠 자기">
+          <option value="산책하기">
+          <option value="유튜브 보기">
+          <option value="책 읽기">
+        </datalist>
+      </label>
+
+      <!-- 체크박스 (동물 선택) -->
+      <label>좋아하는 동물 유형:</label>
+      <label><input type="checkbox" name="animals" value="강아지"> 강아지</label>
+      <label><input type="checkbox" name="animals" value="고양이"> 고양이</label>
+      <label><input type="checkbox" name="animals" value="토끼"> 토끼</label>
+      <label><input type="checkbox" name="animals" value="카피바라"> 카피바라</label>
+
+      <!-- 라디오 버튼 (등급 한 개만 선택) -->
+      <label>희망 팬클럽 등급 (1개만 선택):</label>
+      <label><input type="radio" name="grade" value="실버등급" required> 실버등급</label>
+      <label><input type="radio" name="grade" value="골드등급"> 골드등급</label>
+      <label><input type="radio" name="grade" value="다이아몬드등급"> 다이아몬드등급</label>
+
+      <!-- 콤보박스 (처음 알게 된 경로) -->
+      <label>
+        이지영을 처음 알게 된 경로:
+        <select name="discovery">
+          <option value="학교">학교</option>
+          <option value="아르바이트">아르바이트</option>
+          <option value="우연히">우연히</option>
+          <option value="기타">기타</option>
+        </select>
+      </label>
+
+      <!-- 여러 줄 텍스트 (팬이 된 이유) -->
+      <label for="reason_id">팬이 된 이유:</label><br>
+      <textarea rows="4" id="reason_id" name="reason" required>행동이 너무 귀여워요 ㅎㅎ</textarea>
+
+      <!-- 제출 버튼 -->
+      <br><br>
+      <button type="submit">가입 신청</button>
+    </form>
+  </div>
+
+  <script>
+    function submitForm(event) {
+      alert("가입 신청이 접수되었습니다. 감사합니다~~");
+    }
+  </script>
+
+</body>
+</html>
